@@ -1,0 +1,14 @@
+version: "3.9"
+services:
+  dev-db:
+    image: postgres:13
+    ports:
+      - "5434:5432"
+    environment:
+      POSTGRES_USER: radensuaso
+      POSTGRES_PASSWORD: heyho0
+      POSTGRES_DB: bookmark-api
+    networks:
+      - radensuaso-network
+networks:
+  radensuaso-network:
